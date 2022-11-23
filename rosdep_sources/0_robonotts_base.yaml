@@ -1,0 +1,4 @@
+python-pytorch-pip:
+        arch:
+                pip:
+                        packages: [torch, torchvision]
