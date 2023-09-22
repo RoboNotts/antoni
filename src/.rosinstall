@@ -7,3 +7,4 @@
     version: ros1-legacy}
 - git: {local-name: drake, uri: 'git@github.com:RoboNotts/Drake.git', version: main}
 - git: {local-name: bocelli, uri: 'git@github.com:RoboNotts/Bocelli.git', version: main}
+- setup-file: {local-name: /opt/ros/noetic/setup.sh}

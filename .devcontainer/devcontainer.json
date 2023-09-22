@@ -6,7 +6,7 @@
     "--privileged",
     "--network=host"
   ],
-  "onCreateCommand": "cd /home/vscode/${localWorkspaceFolderBasename} && bash -c \"rosinstall && rosdep install --from-paths src\"",
+  "postCreateCommand": "bash -c \"rosws update -t src && rosdep install --from-paths src\"",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/${localWorkspaceFolderBasename},type=bind",
   "workspaceFolder": "/home/vscode/${localWorkspaceFolderBasename}"
 }
