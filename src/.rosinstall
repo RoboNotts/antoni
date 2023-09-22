@@ -1,0 +1,9 @@
+# IT IS UNLIKELY YOU WANT TO EDIT THIS FILE BY HAND,
+# UNLESS FOR REMOVING ENTRIES.
+# IF YOU WANT TO CHANGE THE ROS ENVIRONMENT VARIABLES
+# USE THE rosinstall TOOL INSTEAD.
+# IF YOU CHANGE IT, USE rosinstall FOR THE CHANGES TO TAKE EFFECT
+- git: {local-name: realsense, uri: 'https://github.com/IntelRealSense/realsense-ros.git',
+    version: ros1-legacy}
+- git: {local-name: drake, uri: 'git@github.com:RoboNotts/Drake.git', version: main}
+- git: {local-name: bocelli, uri: 'git@github.com:RoboNotts/Bocelli.git', version: main}

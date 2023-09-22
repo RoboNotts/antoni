@@ -1,0 +1,12 @@
+{
+  "name": "ROS Noetic Desktop",
+  "dockerFile": "Dockerfile",
+  "context": ".",
+  "runArgs": [
+    "--privileged",
+    "--network=host"
+  ],
+  "onCreateCommand": "cd /home/vscode/${localWorkspaceFolderBasename} && bash -c \"rosinstall && rosdep install --from-paths src\"",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/home/vscode/${localWorkspaceFolderBasename}"
+}
