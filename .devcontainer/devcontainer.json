@@ -4,9 +4,12 @@
   "context": ".",
   "runArgs": [
     "--privileged",
-    "--network=host"
+    "--network=host",
+    "--add-host=localhost:127.0.0.1",
+    "--add-host=lo:127.0.0.1",
+    "--add-host=loopback:127.0.0.1"
   ],
-  "postCreateCommand": "bash -c \"rosws update -t src && rosdep install --from-paths src\"",
+  "postCreateCommand": "bash -c \"rosws update -t src\"",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/${localWorkspaceFolderBasename},type=bind",
   "workspaceFolder": "/home/vscode/${localWorkspaceFolderBasename}"
 }

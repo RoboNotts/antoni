@@ -1,2 +1,7 @@
-src/**/*
+# Ignore subdirectories 
+src/
 !src/.rosinstall
+
+# Ignore catkin
+devel/
+build/
