@@ -8,3 +8,4 @@ Antoni is a repository that
 1. Reopen in container
 1. `rosdep install --from-paths src`
 1. `catkin_make`
+1. \[OPTIONAL\] `sudo chown root:video /dev/video*` if you are using any cameras
