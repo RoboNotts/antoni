@@ -5,3 +5,6 @@ src/
 # Ignore catkin
 devel/
 build/
+
+# Ignore VSCode
+.vscode/

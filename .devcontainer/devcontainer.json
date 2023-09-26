@@ -3,12 +3,23 @@
   "dockerFile": "Dockerfile",
   "context": ".",
   "runArgs": [
-    "--privileged",
     "--network=host",
+    "--hostname=antoni",
     "--add-host=localhost:127.0.0.1",
     "--add-host=lo:127.0.0.1",
-    "--add-host=loopback:127.0.0.1"
+    "--add-host=loopback:127.0.0.1",
+    "--add-host=antoni:127.0.0.1",
+    "--ulimit=nofile=1024:524288",
+    // "--device=/dev/video0:/dev/video0:r"
   ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-iot.vscode-ros"
+      ]
+    }
+  },
   "postCreateCommand": "bash -c \"rosws update -t src\"",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/${localWorkspaceFolderBasename},type=bind",
   "workspaceFolder": "/home/vscode/${localWorkspaceFolderBasename}"
