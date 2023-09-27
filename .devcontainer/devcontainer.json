@@ -20,7 +20,7 @@
       ]
     }
   },
-  "postCreateCommand": "bash -c \"rosws update -t src\"",
+  // "postCreateCommand": "bash -c \"rosws update -t src\"",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/${localWorkspaceFolderBasename},type=bind",
   "workspaceFolder": "/home/vscode/${localWorkspaceFolderBasename}"
 }
