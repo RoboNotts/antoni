@@ -1,5 +1,5 @@
 {
-  "name": "ROS Noetic Desktop",
+  "name": "ROS2 Iron Desktop",
   "dockerFile": "Dockerfile",
   "context": ".",
   "runArgs": [
@@ -9,7 +9,7 @@
     "--add-host=lo:127.0.0.1",
     "--add-host=loopback:127.0.0.1",
     "--add-host=antoni:127.0.0.1",
-    "--ulimit=nofile=1024:524288",
+    "--ulimit=nofile=1024:524288"
     // "--device=/dev/video0:/dev/video0:r"
   ],
   "customizations": {
