@@ -2,9 +2,11 @@
 src/
 !src/.rosinstall
 
-# Ignore catkin
+# Ignore catkin & colcon
 devel/
 build/
+log/
+install/
 
 # Ignore VSCode
 .vscode/

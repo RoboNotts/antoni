@@ -1,4 +1,4 @@
-FROM osrf/ros:iron
+FROM ros:iron
 
 # Add vscode user with same UID and GID as your host system
 # (copied from https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user#_creating-a-nonroot-user)
@@ -8,7 +8,7 @@ ARG USER_GID=$USER_UID
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && apt-get update \
-    && apt-get install -y sudo pip \
+    && apt-get install -y sudo pip python3-vcstool curl iputils-ping ros-$ROS_DISTRO-moveit ros-$ROS_DISTRO-slam-toolbox\
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
