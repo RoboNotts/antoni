@@ -8,9 +8,12 @@ ARG USER_GID=$USER_UID
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && apt-get update \
-    && apt-get install -y sudo pip python3-vcstool curl iputils-ping ros-$ROS_DISTRO-moveit ros-$ROS_DISTRO-slam-toolbox ros-$ROS_DISTRO-ros2-control ros-$ROS_DISTRO-robot-state-publisher ros-$ROS_DISTRO-joint-state-publisher-gui\
+    && apt-get install -y sudo pip python3-vcstool curl iputils-ping ros-$ROS_DISTRO-moveit ros-$ROS_DISTRO-slam-toolbox ros-$ROS_DISTRO-ros2-control ros-$ROS_DISTRO-robot-state-publisher ros-$ROS_DISTRO-joint-state-publisher-gui ros-$ROS_DISTRO-ros2-control ros-$ROS_DISTRO-ros2-controllers\
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
+
+# Install Rustup
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # Add user to video group to allow access to webcam
 RUN usermod --append --groups video $USERNAME
