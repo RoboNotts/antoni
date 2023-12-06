@@ -8,7 +8,7 @@ ARG USER_GID=$USER_UID
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && apt-get update \
-    && apt-get install -y sudo pip \
+    && apt-get install -y sudo curl pip ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control ros-noetic-turtlebot3 ros-noetic-turtlebot3-msgs ros-noetic-dynamixel-sdk \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 

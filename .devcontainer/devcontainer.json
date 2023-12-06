@@ -12,6 +12,9 @@
     "--ulimit=nofile=1024:524288"
     // "--device=/dev/video0:/dev/video0:r"
   ],
+  "containerEnv": {
+    "TURTLEBOT3_MODEL": "waffle"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
