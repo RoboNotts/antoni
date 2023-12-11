@@ -13,7 +13,8 @@
     // "--device=/dev/video0:/dev/video0:r"
   ],
   "containerEnv": {
-    "TURTLEBOT3_MODEL": "waffle"
+    "TURTLEBOT3_MODEL": "waffle",
+    "DISPLAY":":0"
   },
   "customizations": {
     "vscode": {
