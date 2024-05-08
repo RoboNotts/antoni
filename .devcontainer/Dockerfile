@@ -14,4 +14,4 @@ ADD ./custom_sources.list /etc/ros/rosdep/sources.list.d/0_custom.list
 RUN rosdep update
 
 # Source the ROS setup file
-RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> /etc/profile
+RUN echo ". /opt/ros/${ROS_DISTRO}/setup.bash" >> /etc/profile
