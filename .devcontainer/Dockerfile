@@ -6,9 +6,6 @@ RUN apt-get update \
 # Install Rustup
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-# Add user to video group to allow access to webcam
-RUN usermod --append --groups video $USERNAME
-
 # Rosdep update
 ADD ./custom_sources.list /etc/ros/rosdep/sources.list.d/0_custom.list
 RUN rosdep update
